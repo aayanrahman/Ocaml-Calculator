@@ -1,0 +1,16 @@
+{
+    "name": "OCaml Dev Container",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
+    "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ocaml opam && opam init --disable-sandboxing && eval $(opam env)",
+    
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ocamllabs.ocaml-platform",  // OCaml platform extension
+          "ms-vscode.cpptools",        // C/C++ extension
+          "esbenp.prettier-vscode"     // Prettier code formatter
+        ]
+      }
+    }
+  }
+  
